@@ -2,16 +2,9 @@
 let generateBtn = document.querySelector("#generate");
 let upperCase = ["A","B","C","D","E","F","G","H","I","J",
 "K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-let lowerCase = upperCase.toLowerCase()
-console.log("lwr case :" + lowerCase)
-
-console.log("letters:" + upperCase)
-//To Lower Case
-
-function test (){
-  console.log("This is a test")
-}
-
+let lowerCase = String.prototype.toLowerCase.apply(upperCase).split(",");
+let specialChar = ["#","!","$","%","^","&","*","/"]
+console.log(specialChar)
 
 
 
