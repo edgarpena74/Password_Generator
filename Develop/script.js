@@ -4,7 +4,7 @@ let upperCase = ["A","B","C","D","E","F","G","H","I","J",
 "K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 let lowerCase = String.prototype.toLowerCase.apply(upperCase).split(",");
 let specialChar = ["#","!","$","%","^","&","*","/", "(", ")"]
-console.log(specialChar)
+
 
 
 
@@ -14,7 +14,7 @@ console.log(specialChar)
 function writePassword() {
   // let password = generatePassword();
   //let passwordText = document.querySelector("#password");
-
+  
   let length = parseInt(prompt("Choose the length of your password.\nThe password must be between at least 8 characters and no more than 128 characters."));
   console.log(length)
 
@@ -22,21 +22,37 @@ function writePassword() {
   if (length < 8) {
     alert("Number greater than 8 must be entered.\nPlease press the button to start again.")
     
-  } else if (length > 128) {
+  } else if (length >128) {
     alert("Number less than 128 must be entered.\nPlease press the button to start again.")
   } else if (isNaN(length)){
     alert("A number must be entered.\nPlease press the button to start again.")
-  } else if (length === false){
-    alert ("Please refresh your browser to start again")
   } else {
     let num = length;
     console.log("Test:"+num)
     let ucCon = confirm("Would you like to use upper case letters? \n Select Ok for Yes \n Select Cancel for No");
     console.log(ucCon)
+      if ( ucCon === true) {
+        ucCon = upperCase
+        console.log(ucCon)
+      } else {
+        console.log("else" + ucCon)
+      }
     let lcCon = confirm("Would you like to use lower case letters? \n Select Ok for Yes \n Select Cancel for No");
     console.log(lcCon)
+      if (lcCon === true) {
+        lcCon = lowerCase
+        console.log(lcCon)
+      } else {
+        console.log("else" + lcCon)
+      }
     let spcharCon = confirm("Would you like to use special characters?\n Select Ok for Yes \n Select Cancel for No");
     console.log(spcharCon)
+      if (spcharCon === true) {
+        spcharCon = specialChar
+        console.log(spcharCon)        
+      } else {
+        console.log("else" + spcharCon)
+      }
   }
   // passwordText.value = password;
 
