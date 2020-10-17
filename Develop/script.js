@@ -5,11 +5,6 @@ let upperCase = ["A","B","C","D","E","F","G","H","I","J",
 let lowerCase = String.prototype.toLowerCase.apply(upperCase).split(",");
 let specialChar = ["#","!","$","%","^","&","*","/", "(", ")"]
 
-
-
-
-
-
 // Write password to the #password input
 function writePassword() {
   // let password = generatePassword();
@@ -53,6 +48,14 @@ function writePassword() {
       } else {
         console.log("else" + spcharCon)
       }
+    if (ucCon === false && lcCon === false && spcharCon === false){
+      alert("Please select at least one of the criteria for the password. \n Please the button to start again")
+    } else {
+
+      alert("this is test")
+      alert("bernie2020")
+
+    }
   }
   // passwordText.value = password;
 
