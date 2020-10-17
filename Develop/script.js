@@ -8,10 +8,13 @@ let specialChar = ["#","!","$","%","^","&","*","/", "(", ")"]
 // Write password to the #password input
 function writePassword() {
   // let password = generatePassword();
-  //let passwordText = document.querySelector("#password");
+  // let passwordText = document.querySelector("#password");
   
   let length = parseInt(prompt("Choose the length of your password.\nThe password must be between at least 8 characters and no more than 128 characters."));
   console.log(length)
+  let ucCon;
+  let lcCon ;
+  let spCharCon;
 
 
   if (length < 8) {
@@ -22,12 +25,12 @@ function writePassword() {
   } else if (isNaN(length)){
     alert("A number must be entered.\nPlease press the button to start again.")
   } else {
-    let num = length;
-    console.log("Test:"+num)
+    
+    console.log("Test:"+ length)
     let ucCon = confirm("Would you like to use upper case letters? \n Select Ok for Yes \n Select Cancel for No");
     console.log(ucCon)
       if ( ucCon === true) {
-        ucCon = upperCase
+        let ucCon = upperCase
         console.log(ucCon)
       } else {
         console.log("else" + ucCon)
@@ -35,28 +38,34 @@ function writePassword() {
     let lcCon = confirm("Would you like to use lower case letters? \n Select Ok for Yes \n Select Cancel for No");
     console.log(lcCon)
       if (lcCon === true) {
-        lcCon = lowerCase
+        let lcCon = lowerCase
         console.log(lcCon)
       } else {
         console.log("else" + lcCon)
       }
-    let spcharCon = confirm("Would you like to use special characters?\n Select Ok for Yes \n Select Cancel for No");
-    console.log(spcharCon)
-      if (spcharCon === true) {
-        spcharCon = specialChar
-        console.log(spcharCon)        
+    let spCharCon = confirm("Would you like to use special characters?\n Select Ok for Yes \n Select Cancel for No");
+    console.log(spCharCon)
+      if (spCharCon === true) {
+        let spCharCon = specialChar
+        console.log(spCharCon)        
       } else {
-        console.log("else" + spcharCon)
+        console.log("else" + spCharCon)
       }
-    if (ucCon === false && lcCon === false && spcharCon === false){
+    if (ucCon === false && lcCon === false && spCharCon === false){
       alert("Please select at least one of the criteria for the password. \n Please the button to start again")
-    } else {
-
-      alert("this is test")
-      alert("bernie2020")
-
+      console.log("Nothing was picked")
     }
+    
+    let num = length
+  console.log("test" + num)
+  console.log("test" + ucCon)
+  console.log("test" + lcCon)
+  console.log("test" + spCharCon)
+
   }
+ 
+
+ 
   // passwordText.value = password;
 
 }
